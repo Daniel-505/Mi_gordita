@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi hermosa bebe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #ffcccc;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #ff99cc;
+        }
+        nav {
+            background-color: #ff99cc;
+            color: #333;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid #ffcccc;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        .gallery-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .description {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #ffcccc;
+            color: #333;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+            border-top: 2px solid #ff99cc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lindos momentos con mi gordita</h1>
+    </header>
+    <nav>
+        <a href="https://www.instagram.com/gggd.dd211/">Instagram</a>
+    </nav>
+    <div class="gallery">
+        <div class="gallery-item">
+            <a href="#desc1">
+                <img src="./Imagenes/foto1.JPG" alt="Imagen 1">
+            </a>
+            <div class="description" id="desc1">acostados despues jugar con una mascarilla negra que te mancho la remera jsdjsdk y despues tomamos terere y miramos jandi, sos una lokita</div>
+        </div>
+        <div class="gallery-item">
+            <a href="#desc2">
+                <img src="./Imagenes/foto2.JPG" alt="Imagen 2">
+            </a>
+            <div class="description" id="desc2">te extraño corason, te quiero abrazar y dormir abrazaditos como gatitos :(</div>
+        </div>
+        <div class="gallery-item">
+            <a href="#desc3">
+                <img src="./Imagenes/foto3.JPG" alt="Imagen 3">
+            </a>
+            <div class="description" id="desc3">En el parque despues de comprarte el cosito para teñirte ksjdkj nos dimos una re vuelta ese dia, se suponia que ibas a comprar y volver sjdksd tu maami no te pregunto porque tardaste??</div>
+        </div>
+        <div class="gallery-item">
+            <a href="#desc4">
+                <img src="./Imagenes/foto4.JPG" alt="Imagen 4">
+            </a>
+            <div class="description" id="desc4">Mi amor sos una bebe muy linda, porfavor no te enojes cuando te digo bebe :(, te lo digo porque te quiero cuidar como un bebe siempre quiero estar con vosen las buenas y en las malas perdon si no puedo ahora :(</div>
+        </div>
+        <div class="gallery-item">
+            <a href="#desc5">
+                <img src="./Imagenes/foto5.PNG" alt="Imagen 5">
+            </a>
+            <div class="description" id="desc5">Pense que iba a doler cuando me sacaste la mascarilla jsdjks, todavia tengo el cosito para hacer esa mascarilla, quiero que nos hagamos juntos la skincare y que me saques los pelos de las cejas y el trend del labial :(((( </div>
+        </div>
+        <div class="gallery-item">
+            <a href="#desc6">
+                <img src="./Imagenes/foto6.PNG" alt="Imagen 6">
+            </a>
+            <div class="description" id="desc6">Que rico cuello, huele muy rico uwuw, tu pelo tmb huele riko me gusta todo de vos y perdon por todo lo malo que te hice sentir, estoy uy arrepentido :(</div>
+        </div>
+        <div class="gallery-item">
+            <a href="#desc7">
+                <img src="./Imagenes/foto7.JPG" alt="Imagen 7">
+            </a>
+            <div class="description" id="desc7">volviendo a casita despues de pasar el dia con mi lob, era que compremos mas chipa y mas jugo sdskjdks</div>
+        </div>
+        <div class="gallery-item">
+            <a href="#desc8">
+                <img src="./Imagenes/foto8.JPG" alt="Imagen 8">
+            </a>
+            <div class="description" id="desc8">Amo comer chipa con vos, lo siento como algo nuestro porque volviamos del cole y comprabamos si habia plata o cuando saliamos al cole para comer alla o en el parque :(</div>
+        </div>
+        <div class="gallery-item">
+            <a href="#desc9">
+                <img src="./Imagenes/foto9.jpeg" alt="Imagen 9">
+            </a>
+            <div class="description" id="desc9">Te amo corason el tiempo pasa lento con vos, me haces muy felis y alegras mis dias cuando estoy triste, espero que tmb sientas lo mismo que yo :(, caundo haces berrinche no me enojo pareces un bebe y yo quiero calmarte o darte lo que queres</div>
+        </div>
+    </div>
+    <footer>
+        <p>Te amo putette</p>
+    </footer>
+
+    <script>
+        // JavaScript to handle the click event on images
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        galleryItems.forEach(item => {
+            const img = item.querySelector('img');
+            const desc = item.querySelector('.description');
+
+            img.addEventListener('click', () => {
+                desc.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
