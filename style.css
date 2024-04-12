@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+header {
+    background-color: #ffcccc;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #ff99cc;
+}
+nav {
+    background-color: #ff99cc;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #ffcccc;
+}
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+.gallery-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.description {
+    padding: 20px;
+    text-align: center;
+}
+footer {
+    background-color: #ffcccc;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    border-top: 2px solid #ff99cc;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+header {
+    background-color: #ffcccc;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #ff99cc;
+}
+nav {
+    background-color: #ff99cc;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #ffcccc;
+}
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+.gallery-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.description {
+    padding: 20px;
+    text-align: center;
+}
+footer {
+    background-color: #ffcccc;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    border-top: 2px solid #ff99cc;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fce4ec; /* Rosa claro */
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+h2 {
+    text-align: center;
+}
+.post {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+.post img {
+    max-width: 100%;
+}
+/* Estilos para alinear los botones debajo del campo de mensaje */
+#postForm div {
+    margin-bottom: 10px;
+}
+#postForm button {
+    display: block;
+    margin: 10px auto 0;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff4081; /* Rosa */
+    color: #fff; /* Texto blanco */
+    border-radius: 5px;
+    cursor: pointer;
+}
+#postForm button:hover {
+    background-color: #f50057; /* Rosa más oscuro al pasar el ratón */
+}
+/* Estilo para el botón de elegir archivo */
+#postForm input[type="file"] {
+    display: none;
+}
+#postForm label[for="photo"] {
+    display: block;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff4081; /* Rosa */
+    color: #fff; /* Texto blanco */
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: fit-content;
+    margin: 10px auto;
+}
+#postForm label[for="photo"]:hover {
+    background-color: #f50057; /* Rosa más oscuro al pasar el ratón */
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publicar Fotos y Mensajes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Publicar Fotos y Mensajes</h2>
+    <form id="postForm" enctype="multipart/form-data" action="upload.php" method="post">
+        <div>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea>
+        </div>
+        <div>
+            <input type="file" id="photo" name="photo" accept="image/*">
+            <label for="photo">Elegir Archivo</label>
+        </div>
+        <button type="submit">Publicar</button>
+    </form>
+    <div id="posts"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mas fotos</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <h1>Mas fotos con mi gordita hermosa</h1>
+    </header>
+    <nav>
+        <a href="https://www.instagram.com/gggd.dd211/">Instagram</a>
+        <a href="index.html">inicio</a>
+    </nav>
+    <div class="gallery">
+        <div class="gallery-item">
+            <a href="#desc9">
+                <img src="./Imagenes/foto9.jpeg" alt="Imagen 9" height="555">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="#desc9">
+                <img src="./Imagenes/foto3.JPG" alt="Imagen 9" height="555px">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="#desc9">
+                <img src="./Imagenes/foto5.jpg" alt="Imagen 9" height="150px">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="#desc9">
+                <img src="./Imagenes/foto2.JPG" alt="Imagen 9">
+            </a>
+        </div>
+    </div>
+    <footer>
+        <p>Te amo putette</p>
+    </footer>
+
+    <script>
+        // JavaScript to handle the click event on images
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        galleryItems.forEach(item => {
+            const img = item.querySelector('img');
+            const desc = item.querySelector('.description');
+
+            img.addEventListener('click', () => {
+                desc.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
