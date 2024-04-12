@@ -22,5 +22,52 @@
     </form>
     <div id="posts"></div>
 </div>
+
+<script>
+    // Cuando la página se cargue completamente
+    document.addEventListener("DOMContentLoaded", function() {
+        // Verificar si hay mensajes almacenados en el Local Storage
+        var storedPosts = localStorage.getItem("posts");
+        
+        // Si hay mensajes almacenados, mostrarlos en la página
+        if (storedPosts) {
+            document.getElementById("posts").innerHTML = storedPosts;
+        }
+    });
+
+    // Cuando se envíe el formulario
+    document.getElementById("postForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Evitar que el formulario se envíe de manera predeterminada
+
+        // Obtener el mensaje y la foto del formulario
+        var message = document.getElementById("message").value;
+        var photo = document.getElementById("photo").files[0];
+
+        // Crear un elemento div para mostrar el mensaje
+        var postDiv = document.createElement("div");
+
+        // Si hay un mensaje, agregarlo al div
+        if (message.trim() !== "") {
+            postDiv.innerHTML = "<p>" + message + "</p>";
+        }
+
+        // Si hay una foto, crear un elemento de imagen y agregarlo al div
+        if (photo) {
+            var img = document.createElement("img");
+            img.src = URL.createObjectURL(photo);
+            img.style.maxWidth = "100%";
+            postDiv.appendChild(img);
+        }
+
+        // Agregar el div al contenedor de publicaciones
+        document.getElementById("posts").appendChild(postDiv);
+
+        // Almacenar las publicaciones en el Local Storage
+        localStorage.setItem("posts", document.getElementById("posts").innerHTML);
+
+        // Limpiar el formulario
+        document.getElementById("postForm").reset();
+    });
+</script>
 </body>
 </html>
