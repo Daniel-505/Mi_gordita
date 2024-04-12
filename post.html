@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Publicar Fotos y Mensajes</title>
 <link rel="stylesheet" href="style.css">
+<style>
+    /* Estilos para el botón de borrar */
+    .delete-button {
+        float: right;
+        margin-top: -33px; /* Ajuste para mover el botón un poco más arriba */
+        margin-left: 10px; /* Espacio entre el mensaje y el botón de borrar */
+        padding: 8px 16px;
+        border: 1px solid #f00;
+        background-color: #f00;
+        color: #fff;
+        border-radius: 4px;
+    }
+</style>
 </head>
 <body>
 <div class="container">
@@ -35,6 +48,14 @@
         }
     });
 
+    // Función para borrar un mensaje
+    function deletePost(postDiv) {
+        postDiv.remove(); // Eliminar el mensaje de la interfaz de usuario
+        // Aquí puedes agregar el código para eliminar el mensaje de la base de datos
+        // Por ahora, simplemente lo eliminaremos del Local Storage
+        localStorage.setItem("posts", document.getElementById("posts").innerHTML);
+    }
+
     // Cuando se envíe el formulario
     document.getElementById("postForm").addEventListener("submit", function(event) {
         event.preventDefault(); // Evitar que el formulario se envíe de manera predeterminada
@@ -49,6 +70,8 @@
         // Si hay un mensaje, agregarlo al div
         if (message.trim() !== "") {
             postDiv.innerHTML = "<p>" + message + "</p>";
+            // Agregar el botón de borrar con la clase delete-button
+            postDiv.innerHTML += '<button class="delete-button" onclick="deletePost(this.parentElement)">Borrar</button>';
         }
 
         // Si hay una foto, crear un elemento de imagen y agregarlo al div
